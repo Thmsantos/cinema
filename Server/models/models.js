@@ -12,9 +12,6 @@ const programacao_Models = database.define('Programacao',{
     Filme: Sequelize.STRING,
     Duracao: Sequelize.STRING,
     Horario: Sequelize.STRING,
-    Capacidade: Sequelize.STRING,
-    Ingressos_Comprados: Sequelize.STRING,
-    Ingressos_Restantes: Sequelize.STRING,
     Faturamento: Sequelize.STRING,
     Sinopse: Sequelize.STRING
 })
