@@ -13,7 +13,6 @@ class teste{
           'Filme',
           'Duracao',
           'Horario',
-          'Ingressos_Restantes',
           'Sinopse'
         ]
       })
