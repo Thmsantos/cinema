@@ -1,7 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  background-color: rgb(34, 118, 197);
+  background-color: #5c0606;
 }
 
 .linha_um,
@@ -28,8 +28,9 @@
 .nove,
 .dez {
   height: 450px;
-  width: 200px;
-  background-color: #2fdda9;
+  width: 380px;
+  background-color: #38B0DE;
+  font-size: 20px;
 }
 
 .sala,
@@ -39,38 +40,36 @@
 .horario,
 .arrecadao{
   margin: 30px;
-  background-color: #2fdda9;
+  background-color: #38B0DE;
 }
 
 .ver_arrecadacao,
-.comprar{
+.comprar,
+.Lotação{
   margin: 10px;
-  background-color: #2fdda9;
-}
-
-.bitcoin{  
-  margin: 10px;
-  border: 1px solid black;
-  background-color: rgb(0, 0, 0);
-  width: 700px;
+  background-color: #FFF;
+  font-size: 15px;
+  padding: 5px;
 }
 
 .tooltip-dolar {
   position: relative;
   display: flex;
   color: white;
-  font-size: large;
+  font-size: 25px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .tooltip-dolar .tooltiptext-dolar {
   visibility: hidden;
-  margin-top: 1px;
+  margin-top: 0px;
   width: 100%;
-  background-color: rgb(0, 0, 0);
-  color: #fff;
+  background-color: #A62A2A;
+  color: #000000;
   position: absolute;
   top: 100%;
+  border: 5px solid aliceblue;
+  height: 450px;
 }
 
 .tooltip-dolar:hover .tooltiptext-dolar {
