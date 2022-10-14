@@ -126,10 +126,10 @@ function App() {
   const [faturamento_aQueda_segundoHorario, setFaturamento_aQueda_segundoHorario] = useState(0);
 
   const [toogleOrfa_primeiroHorario, setToogleOrfa_primeiroHorario] = React.useState(true);
-  const [corOrfa_primeiroHorario, setCorOrfa_primeiroHorario] = React.useState('#38B0DE');
+  const [corOrfa_primeiroHorario, setCorOrfa_primeiroHorario] = React.useState('#E0FFFF');
   React.useEffect(() => {
     if (orfaIngressos_primeiroHorario < 50){
-        setCorOrfa_primeiroHorario((state) => toogleOrfa_primeiroHorario ? '#ffff52': '#ffff52');
+        setCorOrfa_primeiroHorario((state) => toogleOrfa_primeiroHorario ? '#1E90FF': '#1E90FF');
         setToogleOrfa_primeiroHorario(state => !state)
     }
     if (orfaIngressos_primeiroHorario < 25){
@@ -139,10 +139,10 @@ function App() {
   }, [toogleOrfa_primeiroHorario]);
 
   const [toogleOrfa_segundoHorario, setToogleOrfa_segundoHorario] = React.useState(true);
-  const [corOrfa_segundoHorario, setCorOrfa_segundoHorario] = React.useState('#38B0DE');
+  const [corOrfa_segundoHorario, setCorOrfa_segundoHorario] = React.useState('#E0FFFF');
   React.useEffect(() => {
     if (orfaIngressos_segundoHorario < 50){
-        setCorOrfa_segundoHorario((state) => toogleOrfa_segundoHorario ? '#ffff52': '#ffff52');
+        setCorOrfa_segundoHorario((state) => toogleOrfa_segundoHorario ? '#1E90FF': '#1E90FF');
         setToogleOrfa_segundoHorario(state => !state)
     }
     if (orfaIngressos_segundoHorario < 25){
@@ -152,10 +152,10 @@ function App() {
   }, [toogleOrfa_segundoHorario]);
 
   const [toogleNsepreocupe, setToogleNsepreocupe] = React.useState(true);
-  const [corNsepreocupe, setCorNsepreocupe] = React.useState('#38B0DE');
+  const [corNsepreocupe, setCorNsepreocupe] = React.useState('#E0FFFF');
   React.useEffect(() => {
     if (nsepreocupe_ingressos < 60){
-        setCorNsepreocupe((state) => toogleNsepreocupe ? '#ffff52': '#ffff52');
+        setCorNsepreocupe((state) => toogleNsepreocupe ? '#1E90FF': '#1E90FF');
         setToogleNsepreocupe(state => !state)
     }
     if (nsepreocupe_ingressos < 30){
@@ -165,10 +165,10 @@ function App() {
   }, [toogleNsepreocupe]);
 
   const [toogleTelefone, setToogleTelefone] = React.useState(true);
-  const [corTelefone, setCorTelefone] = React.useState('#38B0DE');
+  const [corTelefone, setCorTelefone] = React.useState('#E0FFFF');
   React.useEffect(() => {
     if (telefone_ingressos < 55){
-        setCorTelefone((state) => toogleTelefone ? '#ffff52': '#ffff52');
+        setCorTelefone((state) => toogleTelefone ? '#1E90FF': '#1E90FF');
         setToogleTelefone(state => !state)
     }
     if (telefone_ingressos < 27){
@@ -178,10 +178,10 @@ function App() {
   }, [toogleTelefone]);
 
   const [toogleMulher_rei_primeiro_horario, setToogleMulher_rei_primeiro_horario] = React.useState(true);
-  const [corMulher_rei_primeiro_horario, setCorMulher_rei_primeiro_horario] = React.useState('#38B0DE');
+  const [corMulher_rei_primeiro_horario, setCorMulher_rei_primeiro_horario] = React.useState('#E0FFFF');
   React.useEffect(() => {
     if (mulherRei_ingressos_primeiroHorario < 45){
-        setCorMulher_rei_primeiro_horario((state) => toogleMulher_rei_primeiro_horario ? '#ffff52': '#ffff52');
+        setCorMulher_rei_primeiro_horario((state) => toogleMulher_rei_primeiro_horario ? '#1E90FF': '#1E90FF');
         setToogleMulher_rei_primeiro_horario(state => !state)
     }
     if (mulherRei_ingressos_primeiroHorario < 22){
@@ -191,10 +191,10 @@ function App() {
   }, [toogleMulher_rei_primeiro_horario]);
 
   const [toogleMulher_rei_segundo_horario, setToogleMulher_rei_segundo_horario] = React.useState(true);
-  const [corMulher_rei_segundo_horario, setCorMulher_rei_segundo_horario] = React.useState('#38B0DE');
+  const [corMulher_rei_segundo_horario, setCorMulher_rei_segundo_horario] = React.useState('#E0FFFF');
   React.useEffect(() => {
     if (mulherRei_ingressos_segundoHorario < 45){
-        setCorMulher_rei_segundo_horario((state) => toogleMulher_rei_segundo_horario ? '#ffff52': '#ffff52');
+        setCorMulher_rei_segundo_horario((state) => toogleMulher_rei_segundo_horario ? '#1E90FF': '#1E90FF');
         setToogleMulher_rei_segundo_horario(state => !state)
     }
     if (mulherRei_ingressos_primeiroHorario < 22){
@@ -204,10 +204,10 @@ function App() {
   }, [toogleMulher_rei_segundo_horario]);
 
   const [toogleAvatar, setToogleAvatar] = React.useState(true);
-  const [corAvatar, setCorAvatar] = React.useState('#38B0DE');
+  const [corAvatar, setCorAvatar] = React.useState('#E0FFFF');
   React.useEffect(() => {
     if (avatar_ingressos < 50){
-        setCorAvatar((state) => toogleAvatar ? '#ffff52': '#ffff52');
+        setCorAvatar((state) => toogleAvatar ? '#1E90FF': '#1E90FF');
         setToogleAvatar(state => !state)
     }
     if (avatar_ingressos < 25){
@@ -217,10 +217,10 @@ function App() {
   }, [toogleAvatar]);
 
   const [toogleSorria, setToogleSorria] = React.useState(true);
-  const [corSorria, setCorSorria] = React.useState('#38B0DE');
+  const [corSorria, setCorSorria] = React.useState('#E0FFFF');
   React.useEffect(() => {
     if (sorria_ingressos < 90){
-        setCorSorria((state) => toogleSorria ? '#ffff52': '#ffff52');
+        setCorSorria((state) => toogleSorria ? '#1E90FF': '#1E90FF');
         setToogleSorria(state => !state)
     }
     if (sorria_ingressos < 40){
@@ -230,10 +230,10 @@ function App() {
   }, [toogleSorria]);
 
   const [toogleAqueda_primeiroHorario, setToogleAqueda_primeiroHorario] = React.useState(true);
-  const [corAqueda_primeiroHorario, setCorAqueda_primeiroHorario] = React.useState('#38B0DE');
+  const [corAqueda_primeiroHorario, setCorAqueda_primeiroHorario] = React.useState('#E0FFFF');
   React.useEffect(() => {
     if (aQueda_ingressos_primeiroHorario < 75){
-        setCorAqueda_primeiroHorario((state) => toogleAqueda_primeiroHorario ? '#ffff52': '#ffff52');
+        setCorAqueda_primeiroHorario((state) => toogleAqueda_primeiroHorario ? '#1E90FF': '#1E90FF');
         setToogleAqueda_primeiroHorario(state => !state)
     }
     if (aQueda_ingressos_primeiroHorario < 37){
@@ -243,10 +243,10 @@ function App() {
   }, [toogleAqueda_primeiroHorario]);
 
   const [toogleAqueda_segundoHorario, setToogleAqueda_segundoHorario] = React.useState(true);
-  const [corAqueda_segundoHorario, setCorAqueda_segundoHorario] = React.useState('#38B0DE');
+  const [corAqueda_segundoHorario, setCorAqueda_segundoHorario] = React.useState('#E0FFFF');
   React.useEffect(() => {
     if (aQueda_ingressos_segundoHorario < 75){
-        setCorAqueda_segundoHorario((state) => toogleAqueda_segundoHorario ? '#ffff52': '#ffff52');
+        setCorAqueda_segundoHorario((state) => toogleAqueda_segundoHorario ? '#1E90FF': '#1E90FF');
         setToogleAqueda_segundoHorario(state => !state)
     }
     if (aQueda_ingressos_segundoHorario < 37){
@@ -255,9 +255,35 @@ function App() {
     }
   }, [toogleAqueda_segundoHorario]);
 
+  const [arrecadao, setArrecadacao] = useState('0');
+
   return (
     <div className="App">
       <div className="container">
+
+          <div className='Header'>
+            <p className='txtHeader'>
+                Thiago Primeflix
+            </p>
+          </div>
+
+          <div className='arrecadacao_total'>
+            <button className='arrecadacao_geral_btn' onClick={() => 
+                setArrecadacao(
+                 faturamento_orfa_primeiroHorario +
+                 faturamento_orfa_segundoHorario +
+                 nsepreocupe_faturamento +
+                 telefone_faturamento +
+                 faturamento_mulherRei_primeiroHorario +
+                 faturamento_mulherRei_segundoHorario +
+                 faturamento_avatar +
+                 faturamento_sorria +
+                 faturamento_aQueda_primeiroHorario +
+                 faturamento_aQueda_segundoHorario
+                 )}> Ver faturamento geral
+            </button>
+            <p className='txtArrecadacaoGeral'>Faturamento Geral: {arrecadao} $</p>
+          </div>
 
           <div className="linha_um">
                 <p style={{backgroundColor:corOrfa_primeiroHorario}} className='um'>
