@@ -1,7 +1,42 @@
 *{
   margin: 0;
   padding: 0;
-  background-color: #5c0606;
+  background-color: #48919b;
+}
+
+
+.Header,
+.txtHeader{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  font-weight: 700;
+  background-color: #E0FFFF;
+  color: #000000;
+  margin: 30px;
+}
+
+
+.arrecadacao_total{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.arrecadacao_geral_btn{
+  margin: 0px;
+  background-color: #FFF;
+  font-size: 25px;
+  padding: 20px;
+}
+
+.txtArrecadacaoGeral{
+  font-size: 40px;
+  margin: 5px;
 }
 
 .linha_um,
@@ -26,7 +61,7 @@
 .sete,
 .oito,
 .nove,
-.dez {
+.dez{
   height: 450px;
   width: 380px;
   background-color: #38B0DE;
@@ -64,7 +99,7 @@
   visibility: hidden;
   margin-top: 0px;
   width: 100%;
-  background-color: #A62A2A;
+  background-color: #48919b;
   color: #000000;
   position: absolute;
   top: 100%;
