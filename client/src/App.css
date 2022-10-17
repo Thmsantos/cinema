@@ -15,7 +15,7 @@
   font-weight: 700;
   background-color: #E0FFFF;
   color: #000000;
-  margin: 30px;
+  margin-bottom: 30px;
 }
 
 
@@ -62,7 +62,7 @@
 .oito,
 .nove,
 .dez{
-  height: 450px;
+  height: 530px;
   width: 380px;
   background-color: #38B0DE;
   font-size: 20px;
@@ -73,7 +73,8 @@
 .duracao,
 .restantes,
 .horario,
-.arrecadao{
+.arrecadao,
+.capacidade{
   margin: 30px;
   background-color: #38B0DE;
 }
@@ -104,7 +105,7 @@
   position: absolute;
   top: 100%;
   border: 5px solid aliceblue;
-  height: 450px;
+  height: 530px;
 }
 
 .tooltip-dolar:hover .tooltiptext-dolar {
