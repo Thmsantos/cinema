@@ -128,7 +128,7 @@ function App() {
   const [toogleOrfa_primeiroHorario, setToogleOrfa_primeiroHorario] = React.useState(true);
   const [corOrfa_primeiroHorario, setCorOrfa_primeiroHorario] = React.useState('#E0FFFF');
   React.useEffect(() => {
-    if (orfaIngressos_primeiroHorario < 50){
+    if (orfaIngressos_primeiroHorario < 100){
         setCorOrfa_primeiroHorario((state) => toogleOrfa_primeiroHorario ? '#1E90FF': '#1E90FF');
         setToogleOrfa_primeiroHorario(state => !state)
     }
@@ -141,7 +141,7 @@ function App() {
   const [toogleOrfa_segundoHorario, setToogleOrfa_segundoHorario] = React.useState(true);
   const [corOrfa_segundoHorario, setCorOrfa_segundoHorario] = React.useState('#E0FFFF');
   React.useEffect(() => {
-    if (orfaIngressos_segundoHorario < 50){
+    if (orfaIngressos_segundoHorario < 100){
         setCorOrfa_segundoHorario((state) => toogleOrfa_segundoHorario ? '#1E90FF': '#1E90FF');
         setToogleOrfa_segundoHorario(state => !state)
     }
@@ -154,7 +154,7 @@ function App() {
   const [toogleNsepreocupe, setToogleNsepreocupe] = React.useState(true);
   const [corNsepreocupe, setCorNsepreocupe] = React.useState('#E0FFFF');
   React.useEffect(() => {
-    if (nsepreocupe_ingressos < 60){
+    if (nsepreocupe_ingressos < 120){
         setCorNsepreocupe((state) => toogleNsepreocupe ? '#1E90FF': '#1E90FF');
         setToogleNsepreocupe(state => !state)
     }
@@ -167,7 +167,7 @@ function App() {
   const [toogleTelefone, setToogleTelefone] = React.useState(true);
   const [corTelefone, setCorTelefone] = React.useState('#E0FFFF');
   React.useEffect(() => {
-    if (telefone_ingressos < 55){
+    if (telefone_ingressos < 110){
         setCorTelefone((state) => toogleTelefone ? '#1E90FF': '#1E90FF');
         setToogleTelefone(state => !state)
     }
@@ -180,7 +180,7 @@ function App() {
   const [toogleMulher_rei_primeiro_horario, setToogleMulher_rei_primeiro_horario] = React.useState(true);
   const [corMulher_rei_primeiro_horario, setCorMulher_rei_primeiro_horario] = React.useState('#E0FFFF');
   React.useEffect(() => {
-    if (mulherRei_ingressos_primeiroHorario < 45){
+    if (mulherRei_ingressos_primeiroHorario < 90){
         setCorMulher_rei_primeiro_horario((state) => toogleMulher_rei_primeiro_horario ? '#1E90FF': '#1E90FF');
         setToogleMulher_rei_primeiro_horario(state => !state)
     }
@@ -193,7 +193,7 @@ function App() {
   const [toogleMulher_rei_segundo_horario, setToogleMulher_rei_segundo_horario] = React.useState(true);
   const [corMulher_rei_segundo_horario, setCorMulher_rei_segundo_horario] = React.useState('#E0FFFF');
   React.useEffect(() => {
-    if (mulherRei_ingressos_segundoHorario < 45){
+    if (mulherRei_ingressos_segundoHorario < 90){
         setCorMulher_rei_segundo_horario((state) => toogleMulher_rei_segundo_horario ? '#1E90FF': '#1E90FF');
         setToogleMulher_rei_segundo_horario(state => !state)
     }
@@ -206,7 +206,7 @@ function App() {
   const [toogleAvatar, setToogleAvatar] = React.useState(true);
   const [corAvatar, setCorAvatar] = React.useState('#E0FFFF');
   React.useEffect(() => {
-    if (avatar_ingressos < 50){
+    if (avatar_ingressos < 100){
         setCorAvatar((state) => toogleAvatar ? '#1E90FF': '#1E90FF');
         setToogleAvatar(state => !state)
     }
@@ -232,7 +232,7 @@ function App() {
   const [toogleAqueda_primeiroHorario, setToogleAqueda_primeiroHorario] = React.useState(true);
   const [corAqueda_primeiroHorario, setCorAqueda_primeiroHorario] = React.useState('#E0FFFF');
   React.useEffect(() => {
-    if (aQueda_ingressos_primeiroHorario < 75){
+    if (aQueda_ingressos_primeiroHorario < 150){
         setCorAqueda_primeiroHorario((state) => toogleAqueda_primeiroHorario ? '#1E90FF': '#1E90FF');
         setToogleAqueda_primeiroHorario(state => !state)
     }
@@ -295,6 +295,7 @@ function App() {
                     <p style={{backgroundColor:corOrfa_primeiroHorario}} className='filme'>Filme: {Orfa_filme}</p>
                     <p style={{backgroundColor:corOrfa_primeiroHorario}} className='duracao'>Duração: {Orfa_duracao}</p>
                     <p style={{backgroundColor:corOrfa_primeiroHorario}} className='horario'>Horário: {Orfa_horario}</p>
+                    <p style={{backgroundColor:corOrfa_primeiroHorario}} className='capacidade'>Capacidade: 100</p>
                     <p style={{backgroundColor:corOrfa_primeiroHorario}} className='restantes'>Ingressos_Restantes: {orfaIngressos_primeiroHorario}</p>
                     <p style={{backgroundColor:corOrfa_primeiroHorario}} className='arrecadao'>Arrecadado: {faturamento_orfa_primeiroHorario}$</p>
                     <button className='comprar' onClick={() => setOrfaIngressos_primeiroHorario(orfaIngressos_primeiroHorario - 1)}>Comprar</button>
@@ -311,6 +312,7 @@ function App() {
                     <p style={{backgroundColor:corOrfa_segundoHorario}} className='filme'>Filme: {Orfa_filme}</p>
                     <p style={{backgroundColor:corOrfa_segundoHorario}} className='duracao'>Duração: {Orfa_duracao}</p>
                     <p style={{backgroundColor:corOrfa_segundoHorario}} className='horario'>Horário: {Orfa_segundoHorario_horario}</p>
+                    <p style={{backgroundColor:corOrfa_segundoHorario}} className='capacidade'>Capacidade: 100</p>
                     <p style={{backgroundColor:corOrfa_segundoHorario}} className='restantes'>Ingressos_Restantes: {orfaIngressos_segundoHorario}</p>
                     <p style={{backgroundColor:corOrfa_segundoHorario}} className='arrecadao'>Arrecadado: {faturamento_orfa_segundoHorario}$</p>
                     <button className='comprar' onClick={() => setOrfaIngressos_segundoHorario(orfaIngressos_segundoHorario - 1)}>Comprar</button>
@@ -329,6 +331,7 @@ function App() {
                     <p style={{backgroundColor:corNsepreocupe}} className='filme'>Filme: {nsepreocupe_filme}</p>
                     <p style={{backgroundColor:corNsepreocupe}} className='duracao'>Duração: {nsepreocupe_duracao}</p>
                     <p style={{backgroundColor:corNsepreocupe}} className='horario'>Horário: {nsepreocupe_horario}</p>
+                    <p style={{backgroundColor:corNsepreocupe}} className='capacidade'>Capacidade: 120</p>
                     <p style={{backgroundColor:corNsepreocupe}} className='restantes'>Ingressos_Restantes: {nsepreocupe_ingressos}</p>
                     <p style={{backgroundColor:corNsepreocupe}} className='arrecadao'>Arrecadado: {nsepreocupe_faturamento}$</p>
                     <button  className='comprar' onClick={() => setNsepreocupeIngressos(nsepreocupe_ingressos - 1)}>Comprar</button>
@@ -345,6 +348,7 @@ function App() {
                     <p style={{backgroundColor:corTelefone}} className='filme'>Filme: {telefone_filme}</p>
                     <p style={{backgroundColor:corTelefone}} className='duracao'>Duração: {telefone_duracao}</p>
                     <p style={{backgroundColor:corTelefone}} className='horario'>Horário: {telefone_horario}</p>
+                    <p style={{backgroundColor:corTelefone}} className='capacidade'>Capacidade: 110</p>
                     <p style={{backgroundColor:corTelefone}} className='restantes'>Ingressos_Restantes: {telefone_ingressos}</p>
                     <p style={{backgroundColor:corTelefone}} className='arrecadao'>Arrecadado: {telefone_faturamento}$</p>
                     <button className='comprar' onClick={() => setTelefoneIngressos(telefone_ingressos - 1)}>Comprar</button>
@@ -363,6 +367,7 @@ function App() {
                     <p style={{backgroundColor:corMulher_rei_primeiro_horario}} className='filme'>Filme: {mulher_rei_filme}</p>
                     <p style={{backgroundColor:corMulher_rei_primeiro_horario}} className='duracao'>Duração: {mulher_rei_duracao}</p>
                     <p style={{backgroundColor:corMulher_rei_primeiro_horario}} className='horario'>Horário: {mulher_rei_horario}</p>
+                    <p style={{backgroundColor:corMulher_rei_primeiro_horario}} className='capacidade'>Capacidade: 90</p>
                     <p style={{backgroundColor:corMulher_rei_primeiro_horario}} className='restantes'>Ingressos_Restantes: {mulherRei_ingressos_primeiroHorario}</p>
                     <p style={{backgroundColor:corMulher_rei_primeiro_horario}} className='arrecadao'>Arrecadado: {faturamento_mulherRei_primeiroHorario}$</p>
                     <button className='comprar' onClick={() => setmulherRei_ingressos_primeiroHorario(mulherRei_ingressos_primeiroHorario - 1)}>Comprar</button>
@@ -379,6 +384,7 @@ function App() {
                     <p style={{backgroundColor:corMulher_rei_segundo_horario}} className='filme'>Filme: {mulher_rei_filme}</p>
                     <p style={{backgroundColor:corMulher_rei_segundo_horario}} className='duracao'>Duração: {mulher_rei_duracao}</p>
                     <p style={{backgroundColor:corMulher_rei_segundo_horario}} className='horario'>Horário: {mulherRei_segundoHorario_horario}</p>
+                    <p style={{backgroundColor:corMulher_rei_segundo_horario}} className='capacidade'>Capacidade: 90</p>
                     <p style={{backgroundColor:corMulher_rei_segundo_horario}} className='restantes'>Ingressos_Restantes: {mulherRei_ingressos_segundoHorario}</p>
                     <p style={{backgroundColor:corMulher_rei_segundo_horario}} className='arrecadao'>Arrecadado: {faturamento_mulherRei_segundoHorario}$</p>
                     <button className='comprar' onClick={() => setmulherRei_ingressos_segundoHorario(mulherRei_ingressos_segundoHorario - 1)}>Comprar</button>
@@ -397,6 +403,7 @@ function App() {
                     <p style={{backgroundColor:corAvatar}} className='filme'>Filme: {avatar_filme}</p>
                     <p style={{backgroundColor:corAvatar}} className='duracao'>Duração: {avatar_duracao}</p>
                     <p style={{backgroundColor:corAvatar}} className='horario'>Horário: {avatar_horario}</p>
+                    <p style={{backgroundColor:corAvatar}} className='capacidade'>Capacidade: 100</p>
                     <p style={{backgroundColor:corAvatar}} className='restantes'>Ingressos_Restantes: {avatar_ingressos}</p>
                     <p style={{backgroundColor:corAvatar}} className='arrecadao'>Arrecadado: {faturamento_avatar}$</p>
                     <button className='comprar' onClick={() => setAvatar_ingressos(avatar_ingressos - 1)}>Comprar</button>
@@ -413,6 +420,7 @@ function App() {
                     <p style={{backgroundColor:corSorria}} className='filme'>Filme: {sorria_filme}</p>
                     <p style={{backgroundColor:corSorria}} className='duracao'>Duração: {sorria_duracao}</p>
                     <p style={{backgroundColor:corSorria}} className='horario'>Horário: {sorria_horario}</p>
+                    <p style={{backgroundColor:corSorria}} className='capacidade'>Capacidade: 90</p>
                     <p style={{backgroundColor:corSorria}} className='restantes'>Ingressos_Restantes: {sorria_ingressos}</p>
                     <p style={{backgroundColor:corSorria}} className='arrecadao'>Arrecadado: {faturamento_sorria}$</p>
                     <button className='comprar' onClick={() => setsorria_ingressos(sorria_ingressos - 1)}>Comprar</button>
@@ -431,6 +439,7 @@ function App() {
                     <p style={{backgroundColor:corAqueda_primeiroHorario}} className='filme'>Filme: {aQueda_filme}</p>
                     <p style={{backgroundColor:corAqueda_primeiroHorario}} className='duracao'>Duração: {aQueda_duracao}</p>
                     <p style={{backgroundColor:corAqueda_primeiroHorario}} className='horario'>Horário: {aQueda_horario}</p>
+                    <p style={{backgroundColor:corAqueda_primeiroHorario}} className='capacidade'>Capacidade: 150</p>
                     <p style={{backgroundColor:corAqueda_primeiroHorario}} className='restantes'>Ingressos_Restantes: {aQueda_ingressos_primeiroHorario}</p>
                     <p style={{backgroundColor:corAqueda_primeiroHorario}} className='arrecadao'>Arrecadado: {faturamento_aQueda_primeiroHorario}$</p>
                     <button className='comprar' onClick={() => setaQueda_ingressos_primeiroHorario(aQueda_ingressos_primeiroHorario - 1)}>Comprar</button>
@@ -447,6 +456,7 @@ function App() {
                     <p style={{backgroundColor:corAqueda_segundoHorario}} className='filme'>Filme: {aQueda_filme}</p>
                     <p style={{backgroundColor:corAqueda_segundoHorario}} className='duracao'>Duração: {aQueda_duracao}</p>
                     <p style={{backgroundColor:corAqueda_segundoHorario}} className='horario'>Horário: {aQueda_segundoHorario_horario}</p>
+                    <p style={{backgroundColor:corAqueda_segundoHorario}} className='capacidade'>Capacidade: 150</p>
                     <p style={{backgroundColor:corAqueda_segundoHorario}} className='restantes'>Ingressos_Restantes: {aQueda_ingressos_segundoHorario}</p>
                     <p style={{backgroundColor:corAqueda_segundoHorario}} className='arrecadao'>Arrecadado: {faturamento_aQueda_segundoHorario}$</p>
                     <button className='comprar' onClick={() => setaQueda_ingressos_segundoHorario(aQueda_ingressos_segundoHorario - 1)}>Comprar</button>
