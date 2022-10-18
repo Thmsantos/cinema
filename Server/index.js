@@ -15,5 +15,5 @@ app.use('/cinema', index_Routes)
 
 const port = 3001
 app.listen(port, () => {
-    console.log(`essa porra ta rodando no http://localhost:3001`)
+    console.log(`servidor rodando em http://localhost:3001`)
 })
