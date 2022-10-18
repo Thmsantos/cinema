@@ -113,7 +113,6 @@ function App() {
   const [sorria_ingressos, setsorria_ingressos] = useState(90);
   const [faturamento_sorria, setFaturamento_sorria] = useState(0);
 
-
   const [aQueda_filme, set_aQueda_filme] = useState("")
   const [aQueda_sala, set_aQueda_sala] = useState("")
   const [aQueda_duracao, set_aQueda_duracao] = useState("")
@@ -136,6 +135,7 @@ function App() {
         setCorOrfa_primeiroHorario((state) => toogleOrfa_primeiroHorario ? '#B22222': '#B22222');
         setToogleOrfa_primeiroHorario(state => !state)
     }
+
   }, [toogleOrfa_primeiroHorario]);
 
   const [toogleOrfa_segundoHorario, setToogleOrfa_segundoHorario] = React.useState(true);
@@ -257,6 +257,147 @@ function App() {
 
   const [arrecadao, setArrecadacao] = useState('0');
 
+  const [disable_orfaIngressosPrimeiroHorario, setDisable_orfaIngressosPrimeiroHorario] = React.useState(false);
+ 
+
+  function desabilitar_orfaIngressosPrimeiroHorario(){
+    setOrfaIngressos_primeiroHorario(orfaIngressos_primeiroHorario - 1)
+
+    setToogleOrfa_primeiroHorario(state => !state)
+
+    setFaturamento_orfa_primeiroHorario((101 - orfaIngressos_primeiroHorario) * 30)
+
+    if (orfaIngressos_primeiroHorario < 2){
+        setDisable_orfaIngressosPrimeiroHorario(true)
+    }
+  }
+
+  const [disable_orfaIngressosSegundoHorario, setDisable_orfaIngressosSegundoHorario] = React.useState(false);
+
+  function desabilitar_orfaIngressosSegundoHorario(){
+    setOrfaIngressos_segundoHorario(orfaIngressos_segundoHorario - 1)
+
+    setToogleOrfa_segundoHorario(state => !state)
+
+    setFaturamento_orfa_segundoHorario((101 - orfaIngressos_segundoHorario) * 30)
+
+    if (orfaIngressos_segundoHorario < 2){
+        setDisable_orfaIngressosSegundoHorario(true)
+    }
+  }
+
+  const [disable_nsepreocupe, setDisable_nsepreocupe] = React.useState(false);
+
+  function desabilitar_nsepreocupe(){
+    setNsepreocupeIngressos(nsepreocupe_ingressos - 1)
+
+    setToogleNsepreocupe(state => !state)
+
+    setNsepreocupe_faturamento((121 - nsepreocupe_ingressos) * 30)
+
+    if (nsepreocupe_ingressos < 2){
+        setDisable_nsepreocupe(true)
+    }
+  }
+
+  const [disable_telefone, setDisable_telefone] = React.useState(false);
+
+  function desabilitar_telefone(){
+    setTelefoneIngressos(telefone_ingressos - 1)
+
+    setToogleTelefone(state => !state)
+
+    setTelefone_faturamento((111 - telefone_ingressos) * 30)
+
+    if (nsepreocupe_ingressos < 2){
+        setDisable_telefone(true)
+    }
+  }
+
+  const [disable_Mulher_rei_primeiro_horario, setDisable_Mulher_rei_primeiro_horario] = React.useState(false);
+
+  function desabilitar_Mulher_rei_primeiro_horario(){
+    setmulherRei_ingressos_primeiroHorario(mulherRei_ingressos_primeiroHorario - 1)
+
+    setToogleMulher_rei_primeiro_horario(state => !state)
+
+    setFaturamento_mulherRei_primeiroHorario((91 - mulherRei_ingressos_primeiroHorario) * 30)
+
+    if (mulherRei_ingressos_primeiroHorario < 2){
+        setDisable_Mulher_rei_primeiro_horario(true)
+    }
+  }
+
+  const [disable_Mulher_rei_segundo_horario, setDisable_Mulher_rei_segundo_horario] = React.useState(false);
+
+  function desabilitar_Mulher_rei_segundo_horario(){
+    setmulherRei_ingressos_segundoHorario(mulherRei_ingressos_segundoHorario - 1)
+
+    setToogleMulher_rei_segundo_horario(state => !state)
+
+    setFaturamento_mulherRei_segundoHorario((91 - mulherRei_ingressos_segundoHorario) * 30)
+
+    if (mulherRei_ingressos_segundoHorario < 2){
+        setDisable_Mulher_rei_segundo_horario(true)
+    }
+  }
+
+  const [disable_avatar, setDisable_avatar] = React.useState(false);
+
+  function desabilitar_avatar(){
+    setAvatar_ingressos(avatar_ingressos  - 1)
+
+    setToogleAvatar(state => !state)
+
+    setFaturamento_avatar((101 - avatar_ingressos) * 30)
+
+    if (avatar_ingressos < 2){
+        setDisable_avatar(true)
+    }
+  }
+
+  const [disable_sorria, setDisable_sorria] = React.useState(false);
+
+  function desabilitar_sorria(){
+    setsorria_ingressos(sorria_ingressos  - 1)
+
+    setToogleSorria(state => !state)
+
+    setFaturamento_sorria((91 - sorria_ingressos) * 30)
+
+    if (sorria_ingressos < 2){
+        setDisable_sorria(true)
+    }
+  }
+
+  const [disable_Aqueda_primeiroHorario, setDisable_Aqueda_primeiroHorario] = React.useState(false);
+
+  function desabilitar_Aqueda_primeiroHorario(){
+    setaQueda_ingressos_primeiroHorario(aQueda_ingressos_primeiroHorario  - 1)
+
+    setToogleAqueda_primeiroHorario(state => !state)
+
+    setFaturamento_aQueda_primeiroHorario((151 - aQueda_ingressos_primeiroHorario) * 30)
+
+    if (aQueda_ingressos_primeiroHorario < 2){
+        setDisable_Aqueda_primeiroHorario(true)
+    }
+  }
+
+  const [disable_Aqueda_segundoHorario, setDisable_Aqueda_segundoHorario] = React.useState(false);
+
+  function desabilitar_Aqueda_segundoHorario(){
+    setaQueda_ingressos_segundoHorario(aQueda_ingressos_segundoHorario - 1)
+
+    setToogleAqueda_segundoHorario(state => !state)
+
+    setFaturamento_aQueda_segundoHorario((151 - aQueda_ingressos_segundoHorario) * 30)
+
+    if (aQueda_ingressos_segundoHorario < 2){
+        setDisable_Aqueda_segundoHorario(true)
+    }
+  }
+
   return (
     <div className="App">
       <div className="container">
@@ -298,9 +439,7 @@ function App() {
                     <p style={{backgroundColor:corOrfa_primeiroHorario}} className='capacidade'>Capacidade: 100</p>
                     <p style={{backgroundColor:corOrfa_primeiroHorario}} className='restantes'>Ingressos_Restantes: {orfaIngressos_primeiroHorario}</p>
                     <p style={{backgroundColor:corOrfa_primeiroHorario}} className='arrecadao'>Arrecadado: {faturamento_orfa_primeiroHorario}$</p>
-                    <button className='comprar' onClick={() => setOrfaIngressos_primeiroHorario(orfaIngressos_primeiroHorario - 1)}>Comprar</button>
-                    <button className='ver_arrecadacao' onClick={() => setFaturamento_orfa_primeiroHorario((100 - orfaIngressos_primeiroHorario) * 30)}>Ver arrecadação</button>
-                    <button className='Lotação' onClick={e => setToogleOrfa_primeiroHorario(state => !state)}>Lotação</button>
+                    <button disabled={disable_orfaIngressosPrimeiroHorario} className='comprar' onClick={desabilitar_orfaIngressosPrimeiroHorario}>Comprar</button>
                 </p>
             
                 <p style={{backgroundColor:corOrfa_segundoHorario}} className='dois'>
@@ -315,9 +454,7 @@ function App() {
                     <p style={{backgroundColor:corOrfa_segundoHorario}} className='capacidade'>Capacidade: 100</p>
                     <p style={{backgroundColor:corOrfa_segundoHorario}} className='restantes'>Ingressos_Restantes: {orfaIngressos_segundoHorario}</p>
                     <p style={{backgroundColor:corOrfa_segundoHorario}} className='arrecadao'>Arrecadado: {faturamento_orfa_segundoHorario}$</p>
-                    <button className='comprar' onClick={() => setOrfaIngressos_segundoHorario(orfaIngressos_segundoHorario - 1)}>Comprar</button>
-                    <button className='ver_arrecadacao' onClick={() => setFaturamento_orfa_segundoHorario((100 - orfaIngressos_segundoHorario) * 30)}>Ver arrecadação</button>
-                    <button className='Lotação' onClick={e => setToogleOrfa_segundoHorario(state => !state)}>Lotação</button>
+                    <button disabled={disable_orfaIngressosSegundoHorario} className='comprar' onClick={desabilitar_orfaIngressosSegundoHorario}>Comprar</button>
                 </p>
           </div>
 
@@ -334,9 +471,7 @@ function App() {
                     <p style={{backgroundColor:corNsepreocupe}} className='capacidade'>Capacidade: 120</p>
                     <p style={{backgroundColor:corNsepreocupe}} className='restantes'>Ingressos_Restantes: {nsepreocupe_ingressos}</p>
                     <p style={{backgroundColor:corNsepreocupe}} className='arrecadao'>Arrecadado: {nsepreocupe_faturamento}$</p>
-                    <button  className='comprar' onClick={() => setNsepreocupeIngressos(nsepreocupe_ingressos - 1)}>Comprar</button>
-                    <button  className='ver_arrecadacao' onClick={() => setNsepreocupe_faturamento((120 - nsepreocupe_ingressos) * 30)}>Ver arrecadação</button>
-                    <button  className='Lotação' onClick={e => setToogleNsepreocupe(state => !state)}>Lotação</button>
+                    <button disabled={disable_nsepreocupe} className='comprar' onClick={desabilitar_nsepreocupe}>Comprar</button>
               </p>
 
               <p style={{backgroundColor:corTelefone}} className='quatro'>
@@ -351,9 +486,7 @@ function App() {
                     <p style={{backgroundColor:corTelefone}} className='capacidade'>Capacidade: 110</p>
                     <p style={{backgroundColor:corTelefone}} className='restantes'>Ingressos_Restantes: {telefone_ingressos}</p>
                     <p style={{backgroundColor:corTelefone}} className='arrecadao'>Arrecadado: {telefone_faturamento}$</p>
-                    <button className='comprar' onClick={() => setTelefoneIngressos(telefone_ingressos - 1)}>Comprar</button>
-                    <button className='ver_arrecadacao' onClick={() => setTelefone_faturamento((110 - telefone_ingressos) * 30)}>Ver arrecadação</button>
-                    <button className='Lotação' onClick={e => setToogleTelefone(state => !state)}>Lotação</button>
+                    <button disabled={disable_telefone} className='comprar' onClick={desabilitar_telefone}>Comprar</button>
               </p>
           </div>
 
@@ -370,9 +503,7 @@ function App() {
                     <p style={{backgroundColor:corMulher_rei_primeiro_horario}} className='capacidade'>Capacidade: 90</p>
                     <p style={{backgroundColor:corMulher_rei_primeiro_horario}} className='restantes'>Ingressos_Restantes: {mulherRei_ingressos_primeiroHorario}</p>
                     <p style={{backgroundColor:corMulher_rei_primeiro_horario}} className='arrecadao'>Arrecadado: {faturamento_mulherRei_primeiroHorario}$</p>
-                    <button className='comprar' onClick={() => setmulherRei_ingressos_primeiroHorario(mulherRei_ingressos_primeiroHorario - 1)}>Comprar</button>
-                    <button className='ver_arrecadacao' onClick={() => setFaturamento_mulherRei_primeiroHorario((90 - mulherRei_ingressos_primeiroHorario) * 30)}>Ver arrecadação</button>
-                    <button className='Lotação' onClick={e => setToogleMulher_rei_primeiro_horario(state => !state)}>Lotação</button>
+                    <button disabled={disable_Mulher_rei_primeiro_horario} className='comprar' onClick={desabilitar_Mulher_rei_primeiro_horario}>Comprar</button>
               </p>
             
               <p style={{backgroundColor:corMulher_rei_segundo_horario}} className='seis'>
@@ -387,9 +518,7 @@ function App() {
                     <p style={{backgroundColor:corMulher_rei_segundo_horario}} className='capacidade'>Capacidade: 90</p>
                     <p style={{backgroundColor:corMulher_rei_segundo_horario}} className='restantes'>Ingressos_Restantes: {mulherRei_ingressos_segundoHorario}</p>
                     <p style={{backgroundColor:corMulher_rei_segundo_horario}} className='arrecadao'>Arrecadado: {faturamento_mulherRei_segundoHorario}$</p>
-                    <button className='comprar' onClick={() => setmulherRei_ingressos_segundoHorario(mulherRei_ingressos_segundoHorario - 1)}>Comprar</button>
-                    <button className='ver_arrecadacao' onClick={() => setFaturamento_mulherRei_segundoHorario((90 - mulherRei_ingressos_segundoHorario) * 30)}>Ver arrecadação</button>
-                    <button className='Lotação' onClick={e => setToogleMulher_rei_segundo_horario(state => !state)}>Lotação</button>
+                    <button disabled={disable_Mulher_rei_segundo_horario} className='comprar' onClick={desabilitar_Mulher_rei_segundo_horario}>Comprar</button>
               </p>
           </div>
 
@@ -406,9 +535,7 @@ function App() {
                     <p style={{backgroundColor:corAvatar}} className='capacidade'>Capacidade: 100</p>
                     <p style={{backgroundColor:corAvatar}} className='restantes'>Ingressos_Restantes: {avatar_ingressos}</p>
                     <p style={{backgroundColor:corAvatar}} className='arrecadao'>Arrecadado: {faturamento_avatar}$</p>
-                    <button className='comprar' onClick={() => setAvatar_ingressos(avatar_ingressos - 1)}>Comprar</button>
-                    <button className='ver_arrecadacao' onClick={() => setFaturamento_avatar((100 - avatar_ingressos) * 30)}>Ver arrecadação</button>
-                    <button className='Lotação' onClick={e => setToogleAvatar(state => !state)}>Lotação</button>
+                    <button disabled={disable_avatar} className='comprar' onClick={desabilitar_avatar}>Comprar</button>
             </p>
             
             <p style={{backgroundColor:corSorria}} className='oito'>
@@ -423,9 +550,7 @@ function App() {
                     <p style={{backgroundColor:corSorria}} className='capacidade'>Capacidade: 90</p>
                     <p style={{backgroundColor:corSorria}} className='restantes'>Ingressos_Restantes: {sorria_ingressos}</p>
                     <p style={{backgroundColor:corSorria}} className='arrecadao'>Arrecadado: {faturamento_sorria}$</p>
-                    <button className='comprar' onClick={() => setsorria_ingressos(sorria_ingressos - 1)}>Comprar</button>
-                    <button className='ver_arrecadacao' onClick={() => setFaturamento_sorria((90 - sorria_ingressos) * 30)}>Ver arrecadação</button>
-                    <button className='Lotação' onClick={e => setToogleSorria(state => !state)}>Lotação</button>
+                    <button disabled={disable_sorria} className='comprar' onClick={desabilitar_sorria}>Comprar</button>
             </p>
           </div>
 
@@ -442,9 +567,7 @@ function App() {
                     <p style={{backgroundColor:corAqueda_primeiroHorario}} className='capacidade'>Capacidade: 150</p>
                     <p style={{backgroundColor:corAqueda_primeiroHorario}} className='restantes'>Ingressos_Restantes: {aQueda_ingressos_primeiroHorario}</p>
                     <p style={{backgroundColor:corAqueda_primeiroHorario}} className='arrecadao'>Arrecadado: {faturamento_aQueda_primeiroHorario}$</p>
-                    <button className='comprar' onClick={() => setaQueda_ingressos_primeiroHorario(aQueda_ingressos_primeiroHorario - 1)}>Comprar</button>
-                    <button className='ver_arrecadacao' onClick={() => setFaturamento_aQueda_primeiroHorario((150 - aQueda_ingressos_primeiroHorario) * 30)}>Ver arrecadação</button>
-                    <button className='Lotação' onClick={e => setToogleAqueda_primeiroHorario(state => !state)}>Lotação</button>
+                    <button disabled={disable_Aqueda_primeiroHorario} className='comprar' onClick={desabilitar_Aqueda_primeiroHorario}>Comprar</button>
               </p>
           
               <p style={{backgroundColor:corAqueda_segundoHorario}} className='dez'>
@@ -459,9 +582,7 @@ function App() {
                     <p style={{backgroundColor:corAqueda_segundoHorario}} className='capacidade'>Capacidade: 150</p>
                     <p style={{backgroundColor:corAqueda_segundoHorario}} className='restantes'>Ingressos_Restantes: {aQueda_ingressos_segundoHorario}</p>
                     <p style={{backgroundColor:corAqueda_segundoHorario}} className='arrecadao'>Arrecadado: {faturamento_aQueda_segundoHorario}$</p>
-                    <button className='comprar' onClick={() => setaQueda_ingressos_segundoHorario(aQueda_ingressos_segundoHorario - 1)}>Comprar</button>
-                    <button className='ver_arrecadacao' onClick={() => setFaturamento_aQueda_segundoHorario((150 - aQueda_ingressos_segundoHorario) * 30)}>Ver arrecadação</button>
-                    <button className='Lotação' onClick={e => setToogleAqueda_segundoHorario(state => !state)}>Lotação</button>
+                    <button disabled={disable_Aqueda_segundoHorario} className='comprar' onClick={desabilitar_Aqueda_segundoHorario}>Comprar</button>
               </p>
           </div>
       </div>
