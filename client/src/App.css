@@ -79,9 +79,7 @@
   background-color: #38B0DE;
 }
 
-.ver_arrecadacao,
-.comprar,
-.Lotação{
+.comprar{
   margin: 10px;
   background-color: #FFF;
   font-size: 15px;
@@ -111,5 +109,3 @@
 .tooltip-dolar:hover .tooltiptext-dolar {
   visibility: visible;
 }
-
-
